@@ -15,8 +15,8 @@
 			-moz-box-sizing: border-box; 
 			} 
 		.page { 
-			width: 21.7cm; 
-			min-height: 28cm; 
+			width: 21.7cm;
+			min-height: 28cm;
 			margin: 1cm auto; 
 			border: 1px #D3D3D3 solid; 
 			border-radius: 5px; 
@@ -49,6 +49,7 @@
 				page-break-after: always; 
 				} 
 			}
+
 			.cf:before,
 			.cf:after {
 			  display: table;
@@ -63,7 +64,7 @@
 
 			.site-header {
 			  text-align: center;
-			  background-color: #0060b9; 
+			  background-color: #0060b9;
 			}
 			.site-header h1,
 			.site-header a {
@@ -122,7 +123,10 @@
 
     </header>
 	<div class="book"> 
-		<img class="page" src="./CV-Plantilla.jpg" onload="this.style.display = 'block';" style="display: none;"> 
+		<div id="img_loading" class="page" style="background-color: #e5eff1; display: block;">
+			<img src="./loading.gif" style="left: 7.7cm; position: relative;"> 
+		</div> 
+		<img class="page" src="./CV-Plantilla.jpg" onload="this.style.display = 'block'; document.getElementById('img_loading').style.display = 'none';" style="display: none;">
 	</div>
 </body>
 </html>
